@@ -80,6 +80,7 @@ public class Lab1 {
 	*/
 	   public static int fib(int n)
 	   {
+		  int i = 0;
 		  if (n < 1)
 		  {
 			  return 0;  
@@ -88,14 +89,15 @@ public class Lab1 {
 		  {
 			  return 1;
 		  }
-		  n = n-1;
-		  int [] array = {1,1};
-		  int num = 0;
-		  for (int i = 0; i < n; i++)
+		  int[] array;
+		  array = new int[n+1]; 
+		  array[0] = 0;
+		  array[1] = 1;
+		  for (i = 2; i <= n; i++)
 		  {
-			  array[i]
+			  array[i] = array[i - 1] + array[i - 2];
 		  }
-		 
+		 return array[n];
 		  
 	   }
 
